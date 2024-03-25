@@ -1,7 +1,12 @@
 repos:
-  - repo: local
+-   repo: local
     hooks:
-    - id: pre-commit_BLACK_local
-      name: "El meu pre-commit hook per formatejar el codi"
-      entry: ./hooksLocals/pre-commit_BLACK_local
-      language: system
+    -   id: conventional-commit
+        name: Check Conventional Commit Message
+        language: system
+        entry: python ./hooks/conventional_commit.py
+        stages: [ commit-msg ]
+-   repo: https://github.com/psf/black
+    rev: 22.10.0
+    hooks:
+    -   id: black

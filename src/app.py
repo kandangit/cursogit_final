@@ -1,6 +1,9 @@
 from flask import Flask, jsonify, request
 from src.tasks import add_task, get_tasks, remove_task
+
 app = Flask(__name__)
+
+
 @app.route("/tasks", methods=["GET"])
 def tasks_route():
     return jsonify(get_tasks())
