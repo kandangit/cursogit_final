@@ -1,11 +1,4 @@
 repos:
--   repo: local
-    hooks:
-    -   id: conventional-commit
-        name: Check Conventional Commit Message
-        language: system
-        entry: python ./hooks/conventional_commit.py
-        stages: [ commit-msg ]
 -   repo: https://github.com/psf/black
     rev: 22.10.0
     hooks:
