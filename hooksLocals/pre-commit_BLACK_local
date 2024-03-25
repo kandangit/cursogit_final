@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+files=$(git diff --cached --name-only --diff-filter=ACM | grep -E "\.py$")
+
+for file in $files; do
+    if [[ $file == *.json ]]; then
+        black "$file" 
+    fi
+done
+
+exit 0

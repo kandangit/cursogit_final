@@ -1,0 +1,7 @@
+repos:
+  - repo: local
+    hooks:
+    - id: pre-commit_BLACK_local
+      name: "El meu pre-commit hook per formatejar el codi"
+      entry: ./hooksLocals/pre-commit_BLACK_local
+      language: system
